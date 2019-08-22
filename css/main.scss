@@ -1,0 +1,21 @@
+@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "../../node_modules/normalize-scss/sass/normalize";
+@include normalize();
+
+
+
+@import 'global/fonts';
+@import 'global/vars';
+@import 'global/base';
+@import 'global/common';
+@import 'global/mixins';
+@import 'global/myGallery';
+//@import 'global/myModalWindow';
+@import 'section/_header';
+@import 'section/_about_us';
+@import 'section/_our_classes';
+@import 'section/_gallery';
+@import 'section/_free_resources';
+//@import 'section/_teaching_materials';
+@import 'section/_contacts';
+@import 'section/_footer';

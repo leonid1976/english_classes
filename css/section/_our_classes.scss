@@ -1,0 +1,66 @@
+/*======================<_our_classes>==================*/
+
+.our-classes {
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+
+.our-classes__wrap {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 40px;  
+
+}
+
+.our-classes__discription {
+
+}
+
+.our-classes__discription.even {
+ // grid-column: 2/3;
+}
+
+.our-classes__picture {
+  display: block;
+  box-shadow: $ss-block;
+}
+
+.our-classes__picture.even {
+ // grid-column: 1/2;
+//  grid-row: 2/3;
+}
+
+@media screen and (max-width: 1200px) {
+  .our-classes__wrap {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;  
+  }
+  
+  .our-classes__picture {
+     width: 100%;
+  }    
+}
+
+@media screen and (max-width: 992px) {
+  
+
+}
+
+@media screen and (max-width: 768px) {
+  .our-classes__wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 580px) {
+
+  
+}
+
+/*======================<_our_classes end>==================*/

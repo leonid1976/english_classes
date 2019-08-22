@@ -1,0 +1,43 @@
+html {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  display: block;
+}
+
+li {
+    display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clearfix {
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+
+.upper {
+  text-transform: uppercase;
+}
+
+.bolder {
+  font-weight: bold;
+}

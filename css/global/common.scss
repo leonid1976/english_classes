@@ -1,0 +1,297 @@
+body {
+  font-family: $ff-main;
+  color: $cc-text;
+  font-size: 16px;
+  line-height: 1.7em;
+  letter-spacing: 0.064em;
+  overflow-x: hidden;    
+}
+
+html {
+    scrollbar-color: #74b091 #d8ebe9;
+}
+
+::-webkit-scrollbar {
+  background-color: #d8ebe9;
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #74b091;
+  border-radius: 10px;
+    height: 100px;
+}
+
+.site-overlay, .gallery-overlay {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .65);
+}
+
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+  
+
+.container {
+  width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+section {
+  padding: 80px 0px;
+  text-align: center;
+  position: relative;
+}
+
+.content {
+  padding: 0;
+  display: flex;
+}
+
+
+.btn {
+  display: inline-block;
+  font-size: 20px;
+  padding: 24px 36px;
+  letter-spacing: 0.180em;
+  cursor: pointer;
+}
+
+h1 {
+  font-family: $ff-head;
+  font-size: 48px;
+  line-height: 1.3em;
+  letter-spacing: 0.119em;
+  color: #ffffff;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+//  text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.35);
+}
+
+
+h2 {
+    font-family: $ff-main-b;
+    font-size: 40px;
+    letter-spacing: 0.119em;
+    color: $cc-head; 
+    text-align: center;
+    margin-bottom: 56px;
+    text-transform: uppercase;
+    line-height: 1.2em;
+}
+
+h3 {
+  font-size: 32px;
+  font-family: $ff-main;
+  line-height: 1.2em;
+  text-align: center;
+  letter-spacing: 0.064em;
+}
+
+h4 {
+  font-family: $ff-main-b;
+  font-size: 16px;
+  letter-spacing: 0.119em;  
+}
+
+
+h5 {
+  font-size: 16px;
+  font-family: $ff-main-b;
+  line-height: 1.2em;
+  text-align: center;
+  letter-spacing: 0.119em;
+}
+
+
+.link  {
+  color: $cc-link;
+  letter-spacing: 0.119em;
+  line-height: 1.2em;
+  font-size: 12px;
+}
+
+
+.link, 
+.read-more {
+  color: $cc-link;
+  font-family: $ff-main-b;
+  cursor: pointer;
+}
+
+.description {
+  text-align: left;
+}
+
+.isVisible {
+  opacity: 1;
+}
+
+.noActive {
+  display: none;
+}
+
+//----------------form----------------------------------//
+
+input, select, textarea {
+  border: 0px;
+  outline: 0px;
+  border-bottom: 1px solid #06020b;
+  height: 36px; 
+  padding: 6px;
+  padding-top: 14px;
+  background-color: transparent;
+  overflow-y: hidden;    
+}
+
+.field__name {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    color: #8b8b8b;
+    background-color: #ffffff;
+    z-index: -1; 
+  }
+
+input.submit {
+  display: inline-block;
+  font-family: $ff-main;
+  font-size: 16px;
+  padding: 16px 36px;
+  letter-spacing: 0.180em;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #292deb !important;
+  color: #292deb;   
+      &:hover, &:active {
+      background-color: #292deb;
+      color: #ffffff;
+    }  
+}
+
+//---------------- Icon animation ----------------------//
+
+
+
+.icon__frame {
+  transform-origin: 50% 50%;
+  transform: scale(0);
+  
+}
+
+.icon__frame.active {
+  transform: scale(1);
+}
+
+
+.icon__inner {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.icon__inner.active {
+  opacity: 1;
+}
+
+.advantage__icon {
+  height: 192px;
+}
+
+.icon {
+  transition: all 0.6s ease;
+}
+
+
+
+@media screen and (max-width: 1120px) {
+  .page-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  h1 { 
+     font-size: 54px;
+     margin-bottom: 16px;
+  }
+  
+  .page-container {
+    padding: 80px 20px;
+  }  
+  
+}
+
+
+@media screen and (max-width: 768px) {
+
+    h1 { 
+    font-size: 48px;
+      margin-bottom: 16px;
+  }
+  
+  .wrap {
+      grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  h1 { 
+  font-size: 36px;
+    margin-bottom: 14px;
+  }    
+  
+  h2 {
+        font-size: 36px;
+  }
+  
+  
+.cmn-toggle-switch {
+  width: 80px;
+  height: 70px;  
+  
+}
+  
+.cmn-toggle-switch span {
+  height: 3px;
+}
+  
+.cmn-toggle-switch span::before,
+.cmn-toggle-switch span::after {
+  height: 3px;
+}
+ 
+.cmn-toggle-switch span::before {
+  top: -14px;
+}
+ 
+.cmn-toggle-switch span::after {
+  bottom: -14px;
+}  
+
+}
+
+@media screen and (max-height: 500px) {
+        
+  .page-container {  
+    margin-top: -60px;
+  }
+      
+    h2 {
+        font-size: 30px;
+  }
+}
+
+
+
+
+
