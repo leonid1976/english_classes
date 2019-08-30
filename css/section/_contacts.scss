@@ -154,6 +154,7 @@ input:focus+.field__name, input:not(:placeholder-shown)+.field__name, textarea:f
   z-index: 2;  
   padding: 0px 2px;
   line-height: 12px;
+  background-color: white;
 }
 
 input::placeholder, textarea::placeholder {
@@ -228,6 +229,10 @@ opacity: 0;
 @media screen and (max-width: 580px) {
   input, textarea, input.submit{
     width: 94%; 
+  }
+  
+  input:focus+.field__name, input:not(:placeholder-shown)+.field__name, textarea:focus+.field__name, textarea:not(:placeholder-shown)+.field__name { 
+    left: 14px;
   }
 }
 /*======================<_contacts end>==================*/

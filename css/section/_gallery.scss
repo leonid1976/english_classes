@@ -81,7 +81,11 @@
   .gallerys__wrap{  
     grid-template-columns: 1fr 1fr 1fr;
     width: 90%;   
-    margin: 0 auto; 
+    margin: 0 auto;   
+  }
+  
+  .read-more {
+    margin-top: 48px;
   }
 
 }

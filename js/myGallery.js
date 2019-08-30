@@ -12,13 +12,12 @@ var arrowRight;
 var index; 
 var outer;
 
-function startMyGallery(name) {
-  thumbnails = Array.prototype.slice.call(document.querySelectorAll(name));
-  
+function startMyGallery(thumbName) {
+  thumbnails = Array.prototype.slice.call(document.querySelectorAll(thumbName));
 
   thumbLength = thumbnails.length;
   
-  
+
     for (var i = 0; i < thumbLength; i++) {
       thumbnails[i].addEventListener('click', clickOnThumbnail);
     }
@@ -36,10 +35,9 @@ function clickOnThumbnail(event) {
     crossElement = document.querySelector(".cross");
     arrowLeft = document.querySelector(".gallery__arrow-left");
     arrowRight = document.querySelector(".gallery__arrow-right");
-    index = 0;  
   
     index = Number(this.dataset.index) - 1;
-    fullPicture.style.backgroundImage = "url('/" +  thumbnails[index].dataset.fullUrl; 
+    fullPicture.style.backgroundImage = "url('" +  thumbnails[index].dataset.fullUrl; 
     overlayElement.style.display = "block";
     crossElement.style.display = "block";
     arrowLeft.style.display = "block";  
@@ -158,7 +156,7 @@ function handleArrowRight() {
 function slideShow(index) {
   fullPicture.classList.add("fadeOut");
   setTimeout(function() {
-    fullPicture.style.backgroundImage = "url('/" +  thumbnails[index].dataset.fullUrl; 
+    fullPicture.style.backgroundImage = "url('" +  thumbnails[index].dataset.fullUrl; 
     fullPicture.classList.remove("fadeOut");                
     },1000);
 }

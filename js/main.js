@@ -1,14 +1,19 @@
+  document.addEventListener('DOMContentLoaded', function() {
+    init();
+  }
+);
+
 startMyGallery(".gallery__picture");
 
 function showMore(name, n) {
-    thumbnails = Array.prototype.slice.call(document.querySelectorAll(name));
+    thumbnailsMore = Array.prototype.slice.call(document.querySelectorAll(name));
   
 
-  thumbLength = thumbnails.length; 
-  n = (n < thumbLength) ? n : thumbLength;
+  thumbLengthMore = thumbnailsMore.length; 
+  n = (n < thumbLengthMore) ? n : thumbLengthMore;
   
   for (var i = 0; i < n; i++) {
-    thumbnails[i].style.display = "block"; 
+    thumbnailsMore[i].style.display = "block"; 
   }
   
   var buttonMore = document.getElementById("gallery__more");
@@ -16,13 +21,13 @@ function showMore(name, n) {
   
   function handleButtonMore(event) {    
     event.preventDefault();
-    if(n >= thumbLength) {
+    if(n >= thumbLengthMore) {
       return;
     }; 
     
     if(buttonMore.classList.contains("shown")) {
-        for (var i = n; i < thumbLength; i++) {
-          thumbnails[i].style.display = "none"; 
+        for (var i = n; i < thumbLengthMore; i++) {
+          thumbnailsMore[i].style.display = "none"; 
         }
 
         buttonMore.innerHTML = "Show more...";
@@ -30,8 +35,8 @@ function showMore(name, n) {
       
       
     } else {
-        for (var i = n; i < thumbLength; i++) {
-          thumbnails[i].style.display = "block"; 
+        for (var i = n; i < thumbLengthMore; i++) {
+          thumbnailsMore[i].style.display = "block"; 
         }
 
         buttonMore.innerHTML = "Hide gallery";
@@ -39,5 +44,6 @@ function showMore(name, n) {
     }
   }  
 };
+
 
 showMore(".gallery__item", 12);
